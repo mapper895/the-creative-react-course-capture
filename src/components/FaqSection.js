@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
   return (
@@ -10,9 +11,8 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>{" "}
       </h2>
-      <Toggle>
-        <div className="question">
-          <h4>How Do I Start?</h4>
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -20,12 +20,17 @@ const FaqSection = () => {
               Necessitatibus, alias!
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <Toggle>
-        <div className="question">
-          <h4>Daily Schedule</h4>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+          <div className="question">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, alias!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Diferrent Payment Methods">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
@@ -33,30 +38,17 @@ const FaqSection = () => {
               Necessitatibus, alias!
             </p>
           </div>
-          <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <div className="question">
-        <h4>Diferrent Payment Methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, alias!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What products do you offer?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, alias!
-          </p>
-        </div>
-      </div>
+        </Toggle>
+        <Toggle title="What products do you offer?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus, alias!
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
